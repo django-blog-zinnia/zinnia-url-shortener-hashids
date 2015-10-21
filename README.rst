@@ -14,9 +14,13 @@ Installation
 
   `hashids`_ will also be installed as a dependency.
 
-* Then put this setting to enable the URL shortener backend:
+* Put this setting to enable the URL shortener backend:
 
   ``ZINNIA_URL_SHORTENER_BACKEND = 'zinnia_hashids'``
+
+* Then include this URLconf into your project: ::
+
+    url(r'^', include('zinnia_hashids.urls')),
 
 .. _django-blog-zinnia: http://django-blog-zinnia.com
 .. _hashids: https://github.com/davidaurelio/hashids-python

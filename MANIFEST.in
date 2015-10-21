@@ -1,0 +1,7 @@
+include README.rst
+include LICENSE
+include buildout.cfg
+include versions.cfg
+include bootstrap.py
+recursive-include demo_zinnia_hashids *
+exclude demo_zinnia_hashids/demo.db*
