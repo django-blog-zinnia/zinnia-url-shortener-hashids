@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='zinnia-url-shortener-hashids',
-    version='1.0',
+    version='1.1',
 
     description='Hashids URL shortener backend for django-blog-zinnia',
     long_description=open('README.rst').read(),
