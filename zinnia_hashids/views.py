@@ -1,4 +1,5 @@
 """Views for Zinnia Hashids"""
+from django.http import Http404
 from django.shortcuts import get_object_or_404
 from django.views.generic.base import RedirectView
 
@@ -20,6 +21,9 @@ class EntryHashids(RedirectView):
         in the 'token' variable and return the get_absolute_url
         of the entry.
         """
-        unhashed_pk = hashids.decode(kwargs['token'])[0]
+        try:
+            unhashed_pk = hashids.decode(kwargs['token'])[0]
+        except IndexError:
+            raise Http404('Invalid hash')
         entry = get_object_or_404(Entry.published, pk=unhashed_pk)
         return entry.get_absolute_url()
