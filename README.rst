@@ -20,7 +20,7 @@ Installation
 
 * Then include this URLconf into your project: ::
 
-  url(r'^', include('zinnia_hashids.urls')),
+    url(r'^', include('zinnia_hashids.urls')),
 
 .. _django-blog-zinnia: http://django-blog-zinnia.com
 .. _hashids: https://github.com/davidaurelio/hashids-python
